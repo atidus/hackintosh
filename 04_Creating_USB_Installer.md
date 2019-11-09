@@ -24,7 +24,8 @@ This will partition the disk as listed above and rename it to "INSTALLER".
 
 &#8203;
 
-    sudo “/Applications/Install macOS Mojave.app/Contents/Resources/createinstallmedia” —volume /Volumes/INSTALLER
+    sudo "/Applications/Install macOS Mojave.app/Contents/Resources/createinstallmedia" --volume /Volumes/INSTALLER
+    
 
 * This will take some time, without much output (even 30-40 minutes) but it will complete.
 * This process now places the MacOS installer into the USB drive, but the USB drive still is **not** bootable. This is because in order for a PC to boot you need a special piece of software known as a **bootloader.** The bootloader in this case, will be stored in an *invisible partition* in your USB drive, called the "EFI" partition.  To create this into a bootable drive, we have to utilize a boot loader which is Clover Installer/Builder and create an EFI partition.
